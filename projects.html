@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-page="projects">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Intake | Maker Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="brand">Maker Portfolio</div>
+    <nav class="nav">
+      <a class="nav-link" href="./index.html">Home</a>
+      <a class="nav-link active" href="./projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="panel">
+      <div class="panel-header">
+        <h1>Project intake</h1>
+        <p>Paste rambles or AI summaries. The formatter restructures content into clean, reviewer-ready sections—no backend required.</p>
+      </div>
+      <form id="intake-form" class="intake-form">
+        <label class="field">
+          <span class="field-label">Project title (optional)</span>
+          <input type="text" id="project-title" name="project-title" placeholder="e.g., Rapid IoT Sensor Node" autocomplete="off">
+        </label>
+        <label class="field">
+          <span class="field-label">Raw project notes / AI summary</span>
+          <textarea id="project-notes" name="project-notes" rows="10" required placeholder="Ramble about the build, tech, challenges, outcomes..."></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Ingest project</button>
+          <button type="button" id="clear-storage" class="btn ghost" aria-label="Clear saved projects">Clear stored projects</button>
+        </div>
+        <p class="hint">All processing is client-side. Projects are kept in browser memory/localStorage so nothing overwrites.</p>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Projects</h2>
+        <p>Each card is structured by the mock AI formatter. Swap in a real Claude call inside <code>formatProjectWithAI</code> later.</p>
+      </div>
+      <div id="projects-container" class="projects"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footnote">Local-first, GitHub Pages compatible.</div>
+  </footer>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
