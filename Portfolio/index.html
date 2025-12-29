@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-page="home">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maker Portfolio | Intake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="brand">Maker Portfolio</div>
+    <nav class="nav">
+      <a class="nav-link" href="./index.html">Home</a>
+      <a class="nav-link" href="./projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="hero">
+      <p class="eyebrow">Local-first · GitHub Pages ready</p>
+      <h1>Engineering Portfolio, auto-structured.</h1>
+      <p class="lede">Paste raw rambles or AI summaries. The site shapes them into clear, reviewer-friendly project sections with no backend required.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="./projects.html">Ingest a project</a>
+        <a class="btn ghost" href="#how-it-works">How it works</a>
+      </div>
+    </section>
+
+    <section class="panel" id="how-it-works">
+      <div class="panel-header">
+        <h2>Workflow</h2>
+        <p>Built to swap a mock formatter with Claude (or any LLM) later without rewriting the UI.</p>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <p class="card-label">1. Capture</p>
+          <p>Paste rambles or summaries into the Projects page. Data stays local (localStorage) for offline work.</p>
+        </div>
+        <div class="card">
+          <p class="card-label">2. Shape</p>
+          <p>The mock <code>formatProjectWithAI</code> organizes content into title, description, tech, challenges, outcomes, and media placeholders.</p>
+        </div>
+        <div class="card">
+          <p class="card-label">3. Render</p>
+          <p>Projects appear as collapsible, engineering-style cards. Nothing overwrites—each intake is preserved.</p>
+        </div>
+        <div class="card">
+          <p class="card-label">4. Extend</p>
+          <p>Swap the mock formatter with a Claude API call inside <code>assets/js/app.js</code> when ready.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Design principles</h2>
+        <ul class="pill-list">
+          <li>Pure HTML/CSS/JS</li>
+          <li>No servers. No auth.</li>
+          <li>GitHub Pages compatible</li>
+          <li>Local-first; works offline</li>
+          <li>Engineering tone, minimal flair</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footnote">Ready for Live Server and GitHub Pages.</div>
+  </footer>
+</body>
+</html>
